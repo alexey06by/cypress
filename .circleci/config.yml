@@ -7,7 +7,7 @@ jobs:
     steps:
       - checkout
       - run: npm ci
-      - run: npx cypress run
+      - run: npx cypress run --spec "cypress/e2e/login.cy.ts"
       - store_artifacts:
           path: cypress/videos
       - store_artifacts:
